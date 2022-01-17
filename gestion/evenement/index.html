@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Animation| Evènements</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="../../administration/plugins/fontawesome-free/css/all.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="../../administration/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../administration/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="../../css/main.css">
+
+   <link rel="stylesheet" href="../../administration/plugins/daterangepicker/daterangepicker.css">
+   <!-- iCheck for checkboxes and radio inputs -->
+   <link rel="stylesheet" href="../../administration/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+   <!-- Bootstrap Color Picker -->
+   <link rel="stylesheet" href="../../administration/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+   <!-- Tempusdominus Bootstrap 4 -->
+   <link rel="stylesheet" href="../../administration/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+   <!-- Select2 -->
+   <link rel="stylesheet" href="../../administration/plugins/select2/css/select2.min.css">
+   <link rel="stylesheet" href="../../administration/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+   <!-- Bootstrap4 Duallistbox -->
+   <link rel="stylesheet" href="../../administration/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
+   <!-- BS Stepper -->
+   <link rel="stylesheet" href="../../administration/plugins/bs-stepper/css/bs-stepper.min.css">
+   <!-- dropzonejs -->
+   <link rel="stylesheet" href="../../administration/plugins/dropzone/min/dropzone.min.css">
+
+</head>
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__wobble" src="../../administration/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-dark">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+          <i class="fas fa-search"></i>
+        </a>
+        <div class="navbar-search-block">
+          <form class="form-inline">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Recherche" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+          <i class="fas fa-th-large"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link">
+      <img src="../../administration/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Animation</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="../../administration/dist/img/01.png" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block" id="username" >username</a>
+        </div>
+      </div>
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Recherche" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2" id="navID">
+           
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Evénements</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item active">Evénements</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div>
+      
+      <!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Info boxes -->
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="info-box">
+                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-users"></i></span>
+
+                <div class="info-box-content">
+                  <span class="info-box-text">Administrés</span>
+                  <span class="info-box-number">
+                    10
+                  </span>
+                </div>
+              </div>
+            </div>
+          <!-- /.col -->
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="info-box mb-3">
+                <span class="info-box-icon bg-default elevation-1"><i class="fas fa-calendar"></i></span>
+
+                <div class="info-box-content">
+                  <span class="info-box-text">Evénements</span>
+                  <span class="info-box-number">4</span>
+                </div>
+              </div>
+            </div>
+
+          <!-- fix for small devices only -->
+            <div class="clearfix hidden-md-up"></div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="info-box mb-3">
+                <span class="info-box-icon bg-success elevation-1"><i class="fas fa-calendar-alt"></i></span>
+                <div class="info-box-content">
+                  <span class="info-box-text">Rendez-vous</span>
+                  <span class="info-box-number">7</span>
+                </div>
+              </div>
+            </div>
+      </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12" id="successA" role="alert" style="display: none;">
+                <div class="alert alert-success" >
+                  Opération effectué avec succès
+                </div>
+            </div>
+        </div>
+
+      <div class="row">
+
+        <div class="card col-md-12" id="action" style="display: none;">
+            <div class="card-header">
+              <div class="row">
+                <div class="col-md-11 col-sm-11">
+                  <h3>Opération sur les évènements</h3>
+                </div>
+                <div class="col-md-1 col-sm-1">
+                  <a  id="close"><span><i class="fas fa-times"></i></span></a> 
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="intitule">Intitulé</label>
+                        <input type="text" class="form-control" required id="intitule" placeholder="intitulé...">
+                    </div> 
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="ville">Ville</label>
+                        <input type="text" class="form-control" required id="ville" placeholder="ville...">
+                    </div> 
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="lieux">Lieux (Place) </label>
+                        <input type="text" class="form-control" required id="lieux" placeholder="Place...">
+                    </div> 
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 col-sm-3">
+                    <div class="form-group">
+                        <label>Jours de la semaine</label>
+                        <select id="jour" class="select2" multiple="multiple" data-placeholder="Lundi,Mardi,Mercredi..." style="width: 100%;">
+                            <option value="7" >Tous les Jours</option>
+                            <option value="1" >Lundi</option>
+                            <option value="2" >Mardi</option>
+                            <option value="3" >Mercredi</option>
+                            <option value="4" >Jeudi</option>
+                            <option value="5" >Vendredi</option>
+                            <option value="6" >Samedi</option>
+                            <option value="0" >Dimanche</option>
+                        </select>
+                    </div>
+                    <input type="hidden" id="idEvenement">
+                  </div>
+                  <div class="col-md-3 col-sm-3">
+                    <div class="form-group">
+                        <label>Période (Date debut et fin):</label>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="far fa-calendar-alt"></i>
+                            </span>
+                          </div>
+                          <input  type="text" class="form-control float-right" id="reservation">
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-3">
+                    <div class="form-group">
+                        <label>Heure de début</label>
+                        <input type="time" id="heure_debut" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-3">
+                    <div class="form-group">
+                        <label>Heure de fin</label>
+                        <input type="time" id="heure_fin" class="form-control">
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <div class="form-group">
+                        <label for="validite">Validité du ticket</label>
+                        <select class="form-control" id="validite" style="width: 100%;">
+                            <option value="3" >--------------</option>
+                            <option value="0" >Jours</option>
+                            <option value="1" >Heures</option>
+                            <option value="2" >Tous l'évènement</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group" id="hourRow" style="display: none;">
+                        <label for="lieux">Heures </label>
+                        <input type="number" min="1" max="24" class="form-control"id="heure" >
+                    </div> 
+                </div>
+                <div class="col-md-4" id="minRow" style="display: none;">
+                    <div class="form-group">
+                        <label for="lieux">Minutes </label>
+                        <input type="number" max="59" min="0" class="form-control"id="minute" >
+                    </div> 
+                </div>
+                <div class="col-md-4" id="dayRow" style="display: none;">
+                    <div class="form-group">
+                        <label for="lieux">Nombres de jours </label>
+                        <input type="number" class="form-control" id="days" >
+                    </div> 
+                </div>
+              </div>
+              <div class="row">
+                  <div class="  col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display: none;"  id="waiter">
+                    <center>
+                      <div class="spinner-border text-primary" role="status">
+                          <span class="sr-only">...</span>
+                      </div>
+                    </center>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12">
+                      <div id="warning1"  style="text-align: center; display: none;">
+                          <p style="color: rgb(238, 8, 8);">Attention tous les champs sont obligatoires</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12">
+                      <div id="warning2"  style="text-align: center; display: none;">
+                          <p style="color: rgb(238, 8, 8);">Attention veuillez choisir une fréquence de Validité du ticket</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12">
+                    <div id="warning3"  style="text-align: center; display: none;">
+                        <p style="color: rgb(238, 8, 8);">Attention les heures de durée du ticket ne sont pas valides</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12">
+                    <div id="warning4"  style="text-align: center; display: none;">
+                        <p style="color: rgb(238, 8, 8);">Attention les jours de durée du ticket ne sont pas valides</p>
+                    </div>
+                </div>
+            </div>
+              <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <button type="button" class="btn btn-primary" id="go">Valider</button>
+                </div>
+                <div class="col-md-2 col-sm-2">
+                    <button type="button" class="btn btn-warning" id="leave">Annuler</button>
+                </div>
+                <div class="col-md-2 col-sm-2">
+                    <a  class="btn  btn-danger" id="delete">Supprimer</a>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-body">
+                      <div class="container">
+                        <div class="row">
+                          <button class="btn btn-primary" id="add"><i class="fas fa-plus"></i></button>
+                        </div>
+                          <div class="col-md-12">
+                              <div id='calendar'></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2021</strong>
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+<!-- jQuery -->
+<script src="../../administration/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../../administration/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="../../administration/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../administration/dist/js/adminlte.js"></script>
+
+<!-- PAGE PLUGINS -->
+<!-- jQuery Mapael -->
+<script src="../../administration/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+<script src="../../administration/plugins/raphael/raphael.min.js"></script>
+<script src="../../administration/plugins/jquery-mapael/jquery.mapael.min.js"></script>
+<script src="../../administration/plugins/jquery-mapael/maps/usa_states.min.js"></script>
+<!-- ChartJS -->
+<script src="../../administration/plugins/chart.js/Chart.min.js"></script>
+
+<!-- DataTables  & Plugins -->
+<script src="../../administration/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../administration/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../../administration/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../../administration/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../../administration/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../../administration/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../../administration/plugins/jszip/jszip.min.js"></script>
+<script src="../../administration/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../../administration/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../../administration/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="../../administration/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../../administration/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+<!-- Select2 -->
+<script src="../../administration/plugins/select2/js/select2.full.min.js"></script>
+<!-- Bootstrap4 Duallistbox -->
+<script src="../../administration/plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+<!-- InputMask -->
+<script src="../../administration/plugins/moment/moment.min.js"></script>
+<script src="../../administration/plugins/inputmask/jquery.inputmask.min.js"></script>
+<!-- date-range-picker -->
+<script src="../../administration/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap color picker -->
+<script src="../../administration/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="../../administration/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Bootstrap Switch -->
+<script src="../../administration/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<!-- BS-Stepper -->
+<script src="../../administration/plugins/bs-stepper/js/bs-stepper.min.js"></script>
+<!-- dropzonejs -->
+<script src="../../administration/plugins/dropzone/min/dropzone.min.js"></script>
+<!-- Page specific script -->
+
+<!-- AdminLTE for demo purposes -->
+<script src="../../administration/dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard2.js"></script>
+<script src="../../js/main.js"></script> 
+<script src="../../js/locales/fr.js"></script> 
+<script src="../../js/nav.js"></script>
+<script src="../../js/evenement.js"></script>
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
+<script>
+    $(function () {
+      //Initialize Select2 Elements
+      $('.select2').select2()
+  
+      //Initialize Select2 Elements
+      $('.select2bs4').select2({
+        theme: 'bootstrap4'
+      })
+  
+      //Date picker
+      $('#reservationdate').datetimepicker({
+          format: 'L'
+      });
+  
+      //Date and time picker
+      $('#reservationdatetime').datetimepicker({ icons: { time: 'far fa-clock' } });
+  
+      //Date range picker
+      $('#reservation').daterangepicker()
+      //Date range picker with time picker
+      $('#reservationtime').daterangepicker({
+        timePicker: true,
+        timePickerIncrement: 30,
+        locale: {
+          format: 'MM/DD/YYYY hh:mm A'
+        }
+      })
+
+      //Timepicker
+      $('#timepicker').datetimepicker({
+        format: 'LT'
+      })
+
+      //Timepicker
+      $('#timepicker1').datetimepicker({
+        format: 'LT'
+      })
+  
+      //Bootstrap Duallistbox
+      $('.duallistbox').bootstrapDualListbox()
+  
+    })
+  
+    // DropzoneJS Demo Code Start
+    Dropzone.autoDiscover = false
+  
+    // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
+    var previewNode = document.querySelector("#template")
+    previewNode.id = ""
+    var previewTemplate = previewNode.parentNode.innerHTML
+    previewNode.parentNode.removeChild(previewNode)
+  
+    var myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
+      url: "/target-url", // Set the url
+      thumbnailWidth: 80,
+      thumbnailHeight: 80,
+      parallelUploads: 20,
+      previewTemplate: previewTemplate,
+      autoQueue: false, // Make sure the files aren't queued until manually added
+      previewsContainer: "#previews", // Define the container to display the previews
+      clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
+    })
+  
+    myDropzone.on("addedfile", function(file) {
+      // Hookup the start button
+      file.previewElement.querySelector(".start").onclick = function() { myDropzone.enqueueFile(file) }
+    })
+  
+    // Update the total progress bar
+    myDropzone.on("totaluploadprogress", function(progress) {
+      document.querySelector("#total-progress .progress-bar").style.width = progress + "%"
+    })
+  
+    myDropzone.on("sending", function(file) {
+      // Show the total progress bar when upload starts
+      document.querySelector("#total-progress").style.opacity = "1"
+      // And disable the start button
+      file.previewElement.querySelector(".start").setAttribute("disabled", "disabled")
+    })
+    // DropzoneJS Demo Code End
+  </script>
+<script>
+  getEvent()
+  onLoad()
+</script>
+</body>
+</html>

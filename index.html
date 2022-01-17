@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Site made with Mobirise Website Builder v5.3.14, https://mobirise.com -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v5.3.14, mobirise.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <meta name="description" content="">
+
+
+    <title>Animation | Home</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/dropdown/css/style.css">
+    <link rel="stylesheet" href="assets/socicon/css/styles.css">
+    <link rel="stylesheet" href="assets/theme/css/style.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,400;1,700&display=swap&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,400;1,700&display=swap&display=swap"></noscript>
+    <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css">
+    <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+
+<body>
+
+    <section data-bs-version="5" class="menu menu1 cid-sEg1umT7YK" once="menu" id="menu1-0">
+
+
+        <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+            <div class="container">
+                <div class="navbar-brand">
+
+                    <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-7" href="#">Animation</a></span>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+                        <li class="nav-item"><a class="nav-link link text-black display-4" href="administration/profile.html">Mon profil</a></li>
+                        <li class="nav-item"><a class="nav-link link text-black display-4" href="administration/">Mes Rendez-vous</a></li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section data-bs-version="5" class="header4 cid-sEg1vIstsF mbr-fullscreen" id="header4-1">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="content-wrap">
+                    <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-3 display-2"><strong>&nbsp;Agenda des événements</strong></h1>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="card" style="background-color: rgba(246, 248, 248, 0.932);">
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="col-md-12">
+                                            <div id='calendar'></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="modal  fade" id="ModalCenter" tabindex="-2" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header" style="background-color: rgb(92, 170, 243); color: rgb(246, 248, 248);">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Réservation</h5>
+                                        <button type="button" id="close" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true" style="color: rgb(255, 255, 255);">&times;</span>
+                              </button>
+                                    </div>
+                                    <div class="modal-body" style="background-color: white;">
+                                        <div class="card">
+                                            <div class="card-body">
+
+                                                <form action="">
+                                                    <h3 id="evt"> Evenement</h3>
+                                                    <hr>
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+                                                            <label for="heureFI" style="text-align: right;">
+                                                                Date debut <strong id="date_d"></strong>
+                                                            </label>
+                                                            <!-- <input class="form-control" type="date" id="date_d" readonly>-->
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                            <label for="heureF " style="text-align: right;">
+                                                                Date fin: <strong id="date_f"></strong>
+                                                            </label>
+                                                            <!-- <input class="form-control" type="date" id="date_f" readonly>-->
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                            <label for="heureFI" style="text-align: right;">
+                                                                Date de reservation: <strong id="date"></strong>
+                                                            </label>
+                                                            <!-- <input class="form-control" type="date" readonly>-->
+                                                        </div>
+
+                                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                                            <label for="heureDI">
+                                                                Heure de début: <strong id="heure_r"></strong>
+                                                            </label>
+                                                            <!-- <input class="form-control" type="time" name="heure_r" id="heure_r" readonly>-->
+                                                        </div>
+
+                                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                                            <label for="heureFI">
+                                                                Heure de fin: <strong id="heure_f"></strong>
+                                                            </label>
+                                                            <!-- <input class="form-control" type="time" name="heure_f" id="heure_f" readonly>-->
+                                                        </div>
+
+                                                    </div>
+                                                    <hr>
+                                                    <h3 id="evt"> Informations personnlles</h3>
+                                                    <hr>
+                                                    <div class="row">
+                                                        <div class="col-md-4 col-sm-4 col-xs-4">
+                                                            <label for="heureFI">
+                                                        Nom
+                                                    </label>
+                                                            <input class="form-control" type="text" id="nom">
+                                                        </div>
+                                                        <div class="col-md-4 col-sm-4 col-xs-4">
+                                                            <label for="heureFI">
+                                                        Prenom
+                                                    </label>
+                                                            <input class="form-control" type="text" id="prenom">
+                                                        </div>
+                                                        <div class="col-md-4 col-sm-4 col-xs-4">
+                                                            <label for="heureFI">
+                                                        Email
+                                                    </label>
+                                                            <input class="form-control" type="email" id="email">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-sm-6  col-xs-6">
+                                                            <label for="heureDI">
+                                                        Téléphone
+                                                    </label>
+                                                            <input class="form-control" type="number" name="telephone" id="telephone">
+                                                            <small id="erreurPhone" style="color: red; display: none;"><i>Au moins 10 nombres et commencer par 0</i> </small>
+                                                        </div>
+                                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                                            <label for="heureFI">
+                                                        Adresse
+                                                    </label>
+                                                            <input class="form-control" type="text" id="adresse">
+                                                        </div>
+                                                        <input type="hidden" id="idVal">
+                                                    </div>
+                                                    <div class="row">
+                                                        <script src='https://www.google.com/recaptcha/api.js'></script>
+                                                        <div class=" form-group col-md-12 col-sm-12 col-12">
+                                                            <div class="g-recaptcha" data-sitekey="6LeLdCgaAAAAABZPV_w-_bWBzACxYhSBZ5rkmWRe" data-callback="correctCaptcha"></div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+
+                                            </div>
+                                            <div class="card-footer" style="background-color: white;">
+
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display: none;" id="waiter">
+                                                        <div class="spinner-border text-success" role="status">
+                                                            <span class="sr-only">...</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12">
+                                                        <div id="warning1" style="display: none;">
+                                                            <p style="color: rgb(238, 8, 8);">Attention tous les champs sont obligatoires</p>
+                                                        </div>
+                                                        <div id="warning2" style="display: none;">
+                                                            <p style="color: rgb(247, 7, 7);">Attention les heures ne sont pas comprises durant la période de travail</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                        <button type="button" id="go" class="btn btn-primary" disabled>Valider</button>
+                                                        <button type="button" id="cancel" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/ownscripts.js"></script>
+        <script src="js/locales/fr.js"></script>
+
+        <script>
+            onLoad()
+
+            function correctCaptcha() {
+                $("#go").prop('disabled', false);
+            }
+        </script>
+
+</body>
+
+</html>
